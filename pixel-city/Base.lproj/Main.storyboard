@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -124,19 +125,50 @@
                                     <constraint firstItem="3GI-oR-spV" firstAttribute="centerY" secondItem="4yb-3K-5XK" secondAttribute="centerY" id="u3c-yj-r47"/>
                                 </constraints>
                             </view>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXz-bz-OUc">
+                                <rect key="frame" x="16" y="20" width="343" height="87"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml2-jC-LYe">
+                                        <rect key="frame" x="8" y="43" width="53" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chr-ha-qVL">
+                                        <rect key="frame" x="8" y="8" width="40.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="3xh-9u-Fe2"/>
+                                    <constraint firstAttribute="width" constant="343" id="QIf-4f-qMK"/>
+                                    <constraint firstItem="Chr-ha-qVL" firstAttribute="top" secondItem="tXz-bz-OUc" secondAttribute="topMargin" id="Suc-HM-0kq"/>
+                                    <constraint firstItem="Ml2-jC-LYe" firstAttribute="top" secondItem="Chr-ha-qVL" secondAttribute="bottom" constant="7.5" id="UwM-hw-VU9"/>
+                                    <constraint firstItem="Ml2-jC-LYe" firstAttribute="leading" secondItem="tXz-bz-OUc" secondAttribute="leadingMargin" id="fk0-Oo-Ko3"/>
+                                    <constraint firstItem="Chr-ha-qVL" firstAttribute="leading" secondItem="tXz-bz-OUc" secondAttribute="leadingMargin" id="p6b-Wy-QWQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gQZ-i2-cxO" firstAttribute="top" secondItem="4yb-3K-5XK" secondAttribute="bottom" constant="20" id="0d0-pt-CG3"/>
                             <constraint firstItem="YpK-ol-m7e" firstAttribute="top" secondItem="0eL-jJ-0z0" secondAttribute="top" id="AvE-xC-nj6"/>
+                            <constraint firstItem="tXz-bz-OUc" firstAttribute="leading" secondItem="0eL-jJ-0z0" secondAttribute="leadingMargin" id="Eql-nT-TeY"/>
                             <constraint firstItem="gQZ-i2-cxO" firstAttribute="top" secondItem="YpK-ol-m7e" secondAttribute="bottom" id="OQG-Je-o98"/>
+                            <constraint firstItem="tXz-bz-OUc" firstAttribute="top" secondItem="PW0-p5-aT7" secondAttribute="bottom" id="QGm-G8-ZLH"/>
                             <constraint firstItem="YpK-ol-m7e" firstAttribute="leading" secondItem="0eL-jJ-0z0" secondAttribute="leading" id="aMj-Oh-FVT"/>
                             <constraint firstItem="4yb-3K-5XK" firstAttribute="centerX" secondItem="0eL-jJ-0z0" secondAttribute="centerX" id="czP-1X-AAI"/>
                             <constraint firstAttribute="trailing" secondItem="YpK-ol-m7e" secondAttribute="trailing" id="dCR-U1-FjW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ownerLbl" destination="Ml2-jC-LYe" id="sS3-p9-k49"/>
                         <outlet property="popImageView" destination="YpK-ol-m7e" id="sKs-4T-0gp"/>
+                        <outlet property="titleLbl" destination="Chr-ha-qVL" id="S4c-y0-z7x"/>
+                        <outlet property="titleView" destination="tXz-bz-OUc" id="XAx-pS-Tqh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feG-PH-hth" userLabel="First Responder" sceneMemberID="firstResponder"/>
